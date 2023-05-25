@@ -31,16 +31,6 @@ def generate_launch_description():
             default_value='true',
             description='Use simulation (Gazebo) clock if true'
         ),
-        Node(
-            package='joint_state_publisher_gui',
-            executable='joint_state_publisher_gui',
-            name='joint_state_publisher_gui'
-        ),
-        Node(
-            package='rviz2',
-            executable='rviz2',
-            arguments=['-d', os.path.join(pkg_path,'config','view_bot.rviz')] 
-        ),
         node_robot_state_publisher
     ])
     
