@@ -6,14 +6,12 @@ from launch import LaunchDescription
 from launch.substitutions import LaunchConfiguration
 from launch.actions import DeclareLaunchArgument
 from launch_ros.actions import Node
-from launch_ros.substitutions import FindPackageShare
 
 import xacro
 
 def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time')
 
-    pkg = FindPackageShare('rover').find('rover')
     pkg_path = os.path.join(get_package_share_directory('rover'))
     xacro_file = os.path.join(pkg_path,'description','robot.urdf.xacro')
     robot_description_config = xacro.process_file(xacro_file)
