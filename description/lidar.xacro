@@ -30,7 +30,7 @@
     <gazebo reference="lidar">
         <material>Gazebo/Red</material>
         <sensor name="lidar_sensor" type="ray">
-            <visualize>true</visualize>
+            <visualize>false</visualize>
             <pose>0 0 0 0 0 0</pose>
             <update_rate>10</update_rate>
 
