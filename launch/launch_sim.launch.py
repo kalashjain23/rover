@@ -15,10 +15,11 @@ def generate_launch_description():
         ]), launch_arguments={'use_sim_time': 'true'}.items()
     )
     
+    gazebo_params_file = os.path.join(get_package_share_directory('rover'), 'config', 'gazebo_params.yaml')
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([
             os.path.join(get_package_share_directory('gazebo_ros'), 'launch', 'gazebo.launch.py')
-        ])
+        ]), launch_arguments={'extra_gazebo_args': '--ros-args --params-file ' + gazebo_params_file}.items()
     )
     
     spawn_entity = Node(
