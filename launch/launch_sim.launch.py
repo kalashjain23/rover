@@ -22,7 +22,7 @@ def generate_launch_description():
         ]), launch_arguments={'extra_gazebo_args': '--ros-args --params-file ' + gazebo_params_file}.items()
     )
     
-    twist_mux_params = os.path.join(get_package_share_directory('rover', 'config', 'twist_mux.yaml'))
+    twist_mux_params = os.path.join(get_package_share_directory('rover'), 'config', 'twist_mux.yaml')
     twist_mux = Node(
         package='twist_mux',
         executable='twist_mux',
