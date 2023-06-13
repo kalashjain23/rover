@@ -1,9 +1,9 @@
 # **Rover**
 
 ## **Idea**
-A rover capable of performing mapping, localizing and navigating itself through the map!
+A rover capable of performing **mapping, localizing, and navigating** itself through the map!
  
-*This package has been created and tested on Ubuntu 22.04 with ROS2 Humble, Gazebo 11.10.2, Rviz2 and Nav2 stack.*
+*This package has been created and tested on Ubuntu 22.04 with ROS2 Humble, Gazebo 11.10.2, Rviz2, and Nav2 stack.*
 
 ## **How to build**
 *Creating a workspace to build the package*
@@ -47,6 +47,10 @@ rviz2 -d src/rover/config/mapping.rviz
 # Run teleop_twist_keyboard to control the rover
 ros2 run teleop_twist_keyboard teleop_twist_keyboard -r /cmd_vel:=/diff_cont/cmd_vel_unstamped
 ```
+
+
+https://github.com/kalashjain23/rover/assets/97672680/b83ff8f5-b500-4774-99fc-8b627039eb75
+
 
 ## **Localization**
 
@@ -96,5 +100,8 @@ ros2 run twist_mux twist_mux --ros-args --params-file ./src/rover/config/twist_m
 # Launch Nav2 for navigation
 ros2 launch nav2_bringup navigation_launch.py use_sim_time:=true
 ```  
-
 *You can now start giving goal poses to the rover through Rviz2.*
+
+
+https://github.com/kalashjain23/rover/assets/97672680/37563384-b494-4d4c-9429-9d98d0782e38
+
